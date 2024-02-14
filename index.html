@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corazón y Carta</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .heart-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        .heart {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: beat 1s infinite alternate;
+        }
+        .heart:before,
+        .heart:after {
+            content: '';
+            width: 50px;
+            height: 80px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 50px;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        .heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        @keyframes beat {
+            to {
+                transform: scale(1.1);
+            }
+        }
+        .carta-container {
+            margin-top: 20px;
+            max-width: 800px; 
+            text-align: justify;
+        }
+        .carta-texto {
+            width: 500px;
+            height: 550px;
+            padding: 10px;
+            resize: none;
+            border: 4px solid red;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: justify;
+        }
+        h2 {
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <div class="heart-container">
+        <div class="heart"></div>
+    </div>
+    <div class="carta-container">
+        <h2>¡Feliz San Valentín!</h2> <!-- Texto centrado -->
+        <textarea class="carta-texto" rows="10" cols="50">Para: Mi niña hermosa,
+
+Corazón de melón, que puedo decirte que no te haya dicho ya, eres una persona muy importante para mi y cada día me enamoro más de ti. 
+
+Creo que es muy difícil describir con palabras lo que realmente eres para mi, muchas veces siento que eres mi motivación de todos los días pero también eres la niña que sabe hacerme enojar, que le encanta molestarme y jugar con mis sentimientos pero que aun así me hace sentir como si estuviera enamorado por primera vez.
+
+Eres mi chilemorron, mi niña esotérica, la dueña de mis chaquetas, la dueña de mis sonrisas, de mi risa, de mi corazón, mi hacker tiktoker copa doble D de diablos señorita cómo le hice para que te fijaras en mi? Ah si por que soy la mera riata :D
+
+Yaya que desvarío y me distraigo. Me habría gustado darte la cartita en físico pero a parte de que vives un poquito lejos ibas a pensar que es receta médica jaja
+Quiero desearte un feliz San Valentín y aun que las palabras melosas no son lo mio quiero que sepas que...
+
+Te amo con todo mi corazón,
+
+ATT: Apestosito</textarea>
+    </div>
+</body>
+</html>
